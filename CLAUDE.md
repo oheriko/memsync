@@ -1,47 +1,36 @@
-# MemSync — Project Guidelines
+# AI Assistant — Read This First
 
-A universal project memory system for human-AI collaboration.
+**For AI assistants working on MemSync: Start here → [.memsync/llm.md](./.memsync/llm.md)**
 
-**For complete documentation, see [docs/index.md](./docs/index.md).**
+This file contains everything you need:
+- Core mission and philosophy
+- What you can and cannot do
+- Technical guidelines and constraints
+- How to update project state
+- Decision-making framework
+- When to ask for approval
 
-## Quick Links
+---
 
-- **[README](./README.md)** — What is sync and why it matters
+## Human Documentation
+
+For humans working on or learning about MemSync:
+
+- **[README](./README.md)** — What MemSync is and why it exists
+- **[docs/requirements.md](./docs/requirements.md)** — What we're building
+- **[docs/constraints.md](./docs/constraints.md)** — Guardrails and boundaries
+- **[docs/decisions.md](./docs/decisions.md)** — Why we chose what we chose
+- **[docs/tech.md](./docs/tech.md)** — Tech stack guidance (Bun-native)
 - **[CHANGELOG](./CHANGELOG.md)** — What's been built
-- **[ROADMAP](./ROADMAP.md)** — What's next
-- **[Requirements](./docs/requirements.md)** — What we're building
-- **[Constraints](./docs/constraints.md)** — Guardrails and boundaries
-- **[Decisions](./docs/decisions.md)** — Choices made and why
-- **[Tech Stack](./docs/tech.md)** — How the project is built
-- **[LLM Collaboration Rules](./.memsync/llm.md)** — Working with AI assistants (internal)
-- **[Project State](./.memsync/state.md)** — Current status (internal)
+- **[ROADMAP](./ROADMAP.md)** — Where we're going
 
-## TL;DR
+---
 
-**What**: Universal project memory system for AI-assisted development
+## Project Memory (for all collaborators)
 
-**Why**: LLMs lose context. Projects need persistent memory, guardrails, and decision history.
+- **[.memsync/llm.md](./.memsync/llm.md)** — AI collaboration rules ← **START HERE**
+- **[.memsync/state.md](./.memsync/state.md)** — Current status, architecture, roadmap
 
-**How**: Structured docs that capture requirements, constraints, decisions, state, and collaboration rules.
+---
 
-**Stack-agnostic**: Works with any language/framework. Currently generates Bun templates, more coming.
-
-## Core Structure
-
-```
-README.md — Project overview and mission statement
-CHANGELOG.md   — Project history and changes
-ROADMAP.md     — Future plans and milestones
-
-docs/
-  requirements.md  — What we're building
-  constraints.md   — What's off-limits
-  decisions.md     — Choices made and why
-  tech.md          — Stack-specific guidance
-
-.memsync/
-  llm.md           — AI collaboration rules
-  state.md         — Current focus
-```
-
-Human-facing docs in `docs/`, AI metadata in `.memsync/`.
+**MemSync is built using MemSync. Everything documented here is how we collaborate with AI.**
