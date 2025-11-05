@@ -19,11 +19,13 @@ Documentation drifts from reality. Specs become outdated. Agents repeat suggesti
 
 ### The Solution
 
-**MemSync maintains living project memory that stays in sync with your code.**
+**MemSync organizes your project knowledge so agents understand everything before they start.**
 
-Agents read `.memsync/state.md` to understand your project completely. As they work, they update it. When you manually edit code, MemSync detects the changes and keeps state synchronized.
+Agents read your complete documentation (`docs/`, `.memsync/state.md`, ROADMAP, decisions, etc.) to understand your project fully. They then update `.memsync/state.md` as they work. You keep all docs in sync with code changes via git.
 
-**One source of truth. Always current. Works everywhere.**
+Future versions (v2.0) will automatically detect code changes and regenerate documentation.
+
+**Distributed documentation. Always current. Works everywhere.**
 
 ---
 
