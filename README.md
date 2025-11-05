@@ -59,32 +59,25 @@ Currently (v0.1): Agents manually update state via MCP, humans commit state with
 
 ### 🧠 Comprehensive Context
 
-Your `.memsync/state.md` contains everything agents need:
+Agents get complete context from your project documentation:
 
-```markdown
-# Project Overview
-What this project does and why it exists
+**`.memsync/state.md`** — Living project memory:
+- Project Overview & purpose
+- Current Status & build health
+- Architecture & system design
+- Tech Stack & dependencies
+- Key Decisions & rationale
+- Active work & notes
 
-# Current Status
-Build health, active work, recent completions
+**Supporting docs** (read via MCP):
+- `docs/requirements.md` — What you're building
+- `docs/constraints.md` — Guardrails & boundaries
+- `docs/decisions.md` — Why you chose specific approaches
+- `docs/tech.md` — Tech stack guidance
+- `ROADMAP.md` — Future plans
+- `.memsync/llm.md` — Collaboration rules
 
-# Architecture
-How the system is structured
-
-# Tech Stack
-Languages, frameworks, libraries, versions
-
-# Constraints
-Performance targets, compatibility requirements, business rules
-
-# Key Decisions
-Why things are the way they are (architectural decision records)
-
-# Notes
-Gotchas, TODOs, important reminders
-```
-
-Agents never ask redundant questions. They already know.
+Agents read all of these before working, so they never ask redundant questions. They already know.
 
 ---
 
