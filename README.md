@@ -63,19 +63,18 @@ Currently (v0.1): Agents manually update state via MCP, humans commit state with
 
 Agents get complete context from your project documentation:
 
-**`.memsync/state.md`** — Living project memory:
+**`.memsync/state.md`** — Current project status:
 - Project Overview & purpose
-- Current Status & build health
-- Architecture & system design
-- Tech Stack & dependencies
-- Key Decisions & rationale
-- Active work & notes
+- Build health & active work
+- Recent changes & known issues
+- Architecture overview (links to docs)
+- Tech stack summary (links to docs)
 
 **Supporting docs** (read via MCP):
 - `docs/requirements.md` — What you're building
 - `docs/constraints.md` — Guardrails & boundaries
 - `docs/decisions.md` — Why you chose specific approaches
-- `docs/tech.md` — Tech stack guidance
+- `docs/tech.md` — Tech stack guidance & versions
 - `ROADMAP.md` — Future plans
 - `.memsync/llm.md` — Collaboration rules
 
