@@ -1,0 +1,45 @@
+{
+  "name": "@memsync/mcp",
+  "version": "0.2.2",
+  "description": "MCP server for MemSync - expose project state to AI agents via Model Context Protocol",
+  "module": "index.ts",
+  "type": "module",
+  "license": "MIT",
+  "author": "MemSync Contributors",
+  "homepage": "https://github.com/memsync/memsync",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/memsync/memsync.git",
+    "directory": "packages/mcp"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "project-memory",
+    "ai-agents",
+    "documentation",
+    "sync"
+  ],
+  "files": [
+    "dist",
+    "index.ts",
+    "utils.ts",
+    "README.md"
+  ],
+  "scripts": {
+    "dev": "bun run index.ts",
+    "build": "bun build index.ts --outfile dist/mcp.js --target=bun",
+    "check": "bun build index.ts --target=bun --no-bundle"
+  },
+  "dependencies": {
+    "@memsync/core": "workspace:*",
+    "@anthropic-ai/sdk": "^0.68.0",
+    "@modelcontextprotocol/sdk": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  }
+}

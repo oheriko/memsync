@@ -1,0 +1,7 @@
+{
+  "name": "memsync",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ]
+}

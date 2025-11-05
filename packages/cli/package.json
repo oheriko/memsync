@@ -1,0 +1,55 @@
+{
+  "name": "@memsync/cli",
+  "version": "0.2.2",
+  "description": "Universal project memory CLI for AI agents - sync project state with code changes",
+  "type": "module",
+  "license": "MIT",
+  "author": "MemSync Contributors",
+  "homepage": "https://github.com/memsync/memsync",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/memsync/memsync.git",
+    "directory": "packages/cli"
+  },
+  "keywords": [
+    "project-memory",
+    "ai-agents",
+    "documentation",
+    "sync",
+    "state-management",
+    "mcp",
+    "model-context-protocol",
+    "claude",
+    "ai-coding"
+  ],
+  "bin": {
+    "memsync": "dist/memsync.js"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "dev": "bun src/cli.ts",
+    "build": "bun build src/cli.ts --outfile dist/memsync.js --target=bun",
+    "check": "bun build src/cli.ts --target=bun --no-bundle",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "test:coverage": "vitest --coverage"
+  },
+  "dependencies": {
+    "@memsync/core": "workspace:*",
+    "@anthropic-ai/sdk": "^0.68.0",
+    "@clack/prompts": "^0.11.0",
+    "consola": "^3.4.2",
+    "kleur": "^4.1.5",
+    "smol-toml": "^1.4.2"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "vitest": "^4.0.5"
+  }
+}

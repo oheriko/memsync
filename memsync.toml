@@ -1,0 +1,15 @@
+version = "1.0.0"
+ignore = [ "node_modules/**", "dist/**", ".git/**", ".memsync/**", "build/**", "coverage/**" ]
+
+[sync]
+mode = "advisory"
+checkOnStartup = true
+autoCommit = false
+
+[state]
+maxRecentCompletions = 10
+statusCheckEnabled = true
+
+[llm]
+provider = "anthropic"
+model = "claude-haiku-4-5"

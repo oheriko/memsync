@@ -1,0 +1,41 @@
+{
+  "name": "@memsync/core",
+  "version": "0.2.2",
+  "description": "Core utilities for MemSync - shared file, git, and state management",
+  "type": "module",
+  "module": "src/index.ts",
+  "license": "MIT",
+  "author": "MemSync Contributors",
+  "homepage": "https://github.com/memsync/memsync",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/memsync/memsync.git",
+    "directory": "packages/core"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "project-memory",
+    "ai-agents",
+    "state-management",
+    "utilities"
+  ],
+  "files": [
+    "dist",
+    "index.ts",
+    "types.ts",
+    "files.ts",
+    "git.ts",
+    "state.ts",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "bun build index.ts --outfile dist/core.js --target=bun",
+    "check": "bun build index.ts --target=bun --no-bundle"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/node": "latest"
+  }
+}
