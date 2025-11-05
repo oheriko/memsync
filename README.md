@@ -2,7 +2,7 @@
 
 **Universal Project Memory for AI Agents**
 
-Structured documentation across your project. Works with every AI coding tool. Forever.
+Structured and synced documentation across your project. Works with every AI coding tool. Forever.
 
 ---
 
