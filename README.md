@@ -2,7 +2,7 @@
 
 **Universal Project Memory for AI Agents**
 
-One `.memsync/` folder. Works with every AI coding tool. Forever.
+Structured documentation across your project. Works with every AI coding tool. Forever.
 
 ---
 
