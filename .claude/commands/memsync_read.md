@@ -1,4 +1,4 @@
-# Read Project State
+# /memsync read
 
 Read the MemSync project state to understand the current status, architecture, and collaboration rules.
 
@@ -20,13 +20,18 @@ Use this command to:
 
 Together, these give you complete context for contributing to MemSync.
 
-## Example
+## Usage
 
 ```
-/memsync-read
-
-[Displays full project state and collaboration rules]
+/memsync read
 ```
+
+This will display:
+- Current project status and build health
+- Architecture overview
+- Tech stack and dependencies
+- Roadmap and priorities
+- Collaboration rules and boundaries
 
 ## Files Used
 

@@ -214,6 +214,15 @@ When in doubt:
 3. Check ROADMAP.md — Is this planned?
 4. Ask in context of philosophy — Does this serve "universal memory"?
 
+## Claude Code Commands
+
+Use these commands to stay aligned:
+- `/memsync read` — Understand project state and collaboration rules
+- `/memsync update` — Update state after completing work
+- `/memsync check` — Verify what's approved and what isn't
+
+See [.claude/commands/memsync.md](./.claude/commands/memsync.md) for details.
+
 ## Success Metrics
 
 You're doing great if:

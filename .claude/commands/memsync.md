@@ -4,7 +4,7 @@ Claude Code commands for working on the MemSync project.
 
 ## Available Commands
 
-### `/memsync-read`
+### `/memsync read`
 **Read project state and collaboration rules**
 
 Read the full project state (status, architecture, roadmap) and collaboration guidelines. Use this when you:
@@ -14,12 +14,12 @@ Read the full project state (status, architecture, roadmap) and collaboration gu
 - Are uncertain about the architecture
 
 ```
-/memsync-read
+/memsync read
 ```
 
 ---
 
-### `/memsync-update`
+### `/memsync update`
 **Update project state after completing work**
 
 Update `.memsync/state.md` to reflect completed work. Use this when you:
@@ -30,12 +30,12 @@ Update `.memsync/state.md` to reflect completed work. Use this when you:
 - Change the roadmap
 
 ```
-/memsync-update
+/memsync update
 ```
 
 ---
 
-### `/memsync-check`
+### `/memsync check`
 **Check collaboration boundaries and constraints**
 
 Quick reference for what you can and cannot do. Use this when you:
@@ -45,16 +45,16 @@ Quick reference for what you can and cannot do. Use this when you:
 - Want to verify you're following the philosophy
 
 ```
-/memsync-check
+/memsync check
 ```
 
 ---
 
 ## Quick Start
 
-1. **Start here**: `/memsync-read` — Understand the project
-2. **Before implementing**: `/memsync-check` — Verify what's approved
-3. **When done**: `/memsync-update` — Keep state current
+1. **Start here**: `/memsync read` — Understand the project
+2. **Before implementing**: `/memsync check` — Verify what's approved
+3. **When done**: `/memsync update` — Keep state current
 
 ## Key Resources
 

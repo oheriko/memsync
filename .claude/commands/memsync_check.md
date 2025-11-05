@@ -1,4 +1,4 @@
-# Check Collaboration Rules
+# /memsync check
 
 Quickly review the collaboration boundaries and constraints for working on MemSync.
 

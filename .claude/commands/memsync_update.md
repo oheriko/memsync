@@ -1,4 +1,4 @@
-# Update Project State
+# /memsync update
 
 Update sections of the MemSync project state when you complete work.
 
