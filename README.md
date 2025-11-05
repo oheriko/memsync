@@ -47,13 +47,15 @@ Works with **any** tech stack:
 
 **No lock-in. No proprietary formats. Just markdown + git.**
 
-### 🔄 Bidirectional Sync
+### 🔄 Future Bidirectional Sync (v2.0)
 
-Unlike tools like spec-kit that only go one direction:
+Unlike tools like spec-kit that only go one direction, MemSync is designed for future bidirectional sync:
 
-- **Agents make changes** → State updates automatically
-- **You edit code manually** → State syncs to match reality
-- **Always consistent** → No drift, no stale docs
+- **Agents make changes** → State updates via MCP tools (v2.0)
+- **You edit code manually** → Sync detects changes and regenerates docs (v2.0)
+- **Always consistent** → No drift, no stale docs (goal for v2.0)
+
+Currently (v0.1): Agents manually update state via MCP, humans commit state with code changes.
 
 ### 🧠 Comprehensive Context
 
@@ -115,28 +117,35 @@ memsync.toml     # Configuration
 
 ### Use with AI Agents
 
-That's it! Your AI coding assistant will automatically:
-1. Read `state.md` to understand your project
+Your AI coding assistant can now:
+1. Read `state.md` via MCP to understand your project
 2. Make code changes
-3. Update `state.md` to reflect changes
+3. Call `update_project_state()` to update relevant sections
 
-### Keep in Sync
+For Claude Code:
+- Use `/memsync read` to read state
+- Use `/memsync update` to update sections
+- Configure MCP server in `.claude/mcp.json`
 
-When you manually edit code:
+For OpenCode:
+- Use the memsync commands in `.opencode/` directory
+- Commands auto-generated during init
 
-```bash
-memsync sync
-```
+### Manual Sync (v2.0 Coming)
 
-Or let it happen automatically (configure in `memsync.toml`).
+Automatic drift detection (`memsync sync`) coming in v2.0. For now:
+- Update `.memsync/state.md` manually alongside code changes
+- Commit both together: `git add . && git commit`
+
+Future versions will detect code changes and auto-regenerate state sections.
 
 ---
 
 ## 💡 How It Works
 
-### For Agents (via MCP)
+### For Agents (via MCP) — v0.1
 
-MemSync exposes tools through the Model Context Protocol:
+MemSync exposes tools through the Model Context Protocol for agents to read and update project state:
 
 ```typescript
 // Agent reads project state
@@ -152,23 +161,23 @@ await update_project_state({
 })
 ```
 
-### For Humans
+**Note**: In v0.1, agents manually call `update_project_state()`. Full automatic sync is planned for v2.0.
 
-MemSync watches your git commits:
+### For Humans — v0.1
+
+Today, you manage state.md in git like any other file:
 
 ```bash
-# You make changes
+# You make changes to code and .memsync/state.md
 git add . && git commit -m "Add OAuth support"
 
-# MemSync detects drift (in advisory mode)
-⚠️  memsync: state.md may be stale (3 files changed since last sync)
-
-# You sync when ready
-memsync sync
-# Analyzes diff, updates state.md, commits
+# Future: memsync sync will auto-detect and regenerate (v2.0)
+memsync sync  # Coming in v2.0
 ```
 
-### The Sync Engine
+### The Sync Engine (v2.0 — Future)
+
+When implemented, the sync engine will:
 
 1. **Detect drift**: Compare `state.md` timestamp with latest git commit
 2. **Analyze changes**: Get diff of files changed since last sync
@@ -176,7 +185,7 @@ memsync sync
 4. **Regenerate sections**: Update affected parts of `state.md`
 5. **Commit**: Save updated state (mode dependent)
 
-**Smart, not noisy.** Only updates for significant changes.
+For now (v0.1), state.md updates are manual—commit state changes alongside code changes.
 
 ---
 
@@ -355,26 +364,31 @@ MemSync is built using MemSync! Check `.memsync/state.md` in this repo to see it
 
 ## 🗺️ Roadmap
 
-### v1.0 (Current Focus)
-- ✅ Core CLI (`init`, `sync`, `status`)
-- ✅ Git integration and drift detection
-- ✅ LLM-powered sync engine
-- ✅ MCP server implementation
-- ⏳ Testing and documentation
+**See [ROADMAP.md](./ROADMAP.md) for the full roadmap.**
 
-### v1.1 (Future)
-- **Merge conflict resolution** - Smart handling when branches both update state.md
-- Multi-file support for huge projects
-- Visual diff previews
-- Project templates (React, Django, etc.)
-- Performance optimizations
-- Additional LLM providers
+### v0.1 (Current — Active Development)
+- ✅ Core CLI (`init`)
+- ✅ MCP server with `read_project_state()`, `update_project_state()`
+- ✅ Claude Code & OpenCode integration setup
+- ⏳ Full testing and documentation
 
-### v2.0 (Ideas)
-- IDE extensions (VS Code, etc.)
-- GitHub Actions integration
-- Team collaboration features
-- Analytics and insights
+### v1.0 (Planned)
+- [ ] Stable memory structure
+- [ ] Comprehensive documentation and guides
+- [ ] Multi-stack templates (Go, Python, Rust)
+- [ ] Real-world feedback and validation
+
+### v2.0 (Planned — Bidirectional Sync)
+- [ ] Automatic drift detection (`memsync sync`)
+- [ ] LLM-powered section regeneration
+- [ ] Full MCP server with sync capabilities
+- [ ] GitHub integration for branch sync
+
+### v3.0+ (Future)
+- [ ] Plugin system and custom templates
+- [ ] Team collaboration features
+- [ ] IDE extensions
+- [ ] Broad ecosystem integrations
 
 ---
 
